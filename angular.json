@@ -3,5 +3,41 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
+    "ng-cloudflare-deploy": {
+      "projectType": "library",
+      "root": "projects/ng-cloudflare-deploy",
+      "sourceRoot": "projects/ng-cloudflare-deploy/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/ng-cloudflare-deploy/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/ng-cloudflare-deploy/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/ng-cloudflare-deploy/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "tsConfig": "projects/ng-cloudflare-deploy/tsconfig.spec.json",
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "cli": {
+    "analytics": "b7145ab9-e694-48ea-9a3f-7980a7823074"
   }
 }

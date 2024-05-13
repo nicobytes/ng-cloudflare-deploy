@@ -1,0 +1,28 @@
+{
+  "name": "@nicobytes/ng-cf-deploy",
+  "version": "0.0.45",
+  "scripts": {
+    "build": "tsc -p tsconfig.schematics.json",
+    "postbuild": "copyfiles schematics/*/schema.json schematics/*/files/** schematics/collection.json schematics/builders.json ../../dist/ng-cloudflare-deploy/"
+  },
+  "peerDependencies": {
+    "@angular/common": "17.3.7",
+    "@angular/core": "17.3.7"
+  },
+  "ng-add": {
+    "save": "devDependencies"
+  },
+  "builders": "./schematics/builders.json",
+  "schematics": "./schematics/collection.json",
+  "publishConfig": {
+    "registry": "http://localhost:4873"
+  },
+  "dependencies": {
+    "tslib": "^2.3.0"
+  },
+  "sideEffects": false,
+  "devDependencies": {
+    "copyfiles": "file:../../node_modules/copyfiles",
+    "typescript": "file:../../node_modules/typescript"
+  }
+}

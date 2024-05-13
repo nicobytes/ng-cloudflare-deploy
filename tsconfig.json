@@ -9,6 +9,11 @@
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
     "skipLibCheck": true,
+    "paths": {
+      "ng-cloudflare-deploy": [
+        "./dist/ng-cloudflare-deploy"
+      ]
+    },
     "esModuleInterop": true,
     "sourceMap": true,
     "declaration": false,

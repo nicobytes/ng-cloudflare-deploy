@@ -1,0 +1,2 @@
+name = "<%= classify(name) %>"
+pages_build_output_dir = "./dist/cloudflare"
