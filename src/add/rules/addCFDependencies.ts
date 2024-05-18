@@ -4,15 +4,15 @@ import { addDependency, DependencyType, InstallBehavior } from '@schematics/angu
 export default function addCFDependencies(): Rule {
   return () => {
     return chain([
-      addDependency('wrangler', '^3.53.0', {
+      addDependency('wrangler', 'beta', {
         type: DependencyType.Dev,
         install: InstallBehavior.Auto
       }),
-      addDependency('@cloudflare/workers-types', '^4.20240419.0', {
+      addDependency('@cloudflare/workers-types', 'latest', {
         type: DependencyType.Dev,
         install: InstallBehavior.Auto
       }),
-      addDependency('@miniflare/tre', '^3.0.0-next.14', {
+      addDependency('@miniflare/tre', 'next', {
         type: DependencyType.Dev,
         install: InstallBehavior.Auto
       })

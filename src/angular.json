@@ -1,0 +1,43 @@
+{
+    "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+    "version": 1,
+    "newProjectRoot": "projects",
+    "projects": {
+      "ng-cloudflare-deploy": {
+        "projectType": "library",
+        "root": ".",
+        "sourceRoot": ".",
+        "prefix": "lib",
+        "architect": {
+          "build": {
+            "builder": "@angular-devkit/build-angular:ng-packagr",
+            "options": {
+              "project": "./ng-package.json"
+            },
+            "configurations": {
+              "production": {
+                "tsConfig": "./tsconfig.lib.prod.json"
+              },
+              "development": {
+                "tsConfig": "./tsconfig.lib.json"
+              }
+            },
+            "defaultConfiguration": "production"
+          },
+          "test": {
+            "builder": "@angular-devkit/build-angular:karma",
+            "options": {
+              "tsConfig": "./tsconfig.spec.json",
+              "polyfills": [
+                "zone.js",
+                "zone.js/testing"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "cli": {
+      "analytics": "b7145ab9-e694-48ea-9a3f-7980a7823074"
+    }
+  }

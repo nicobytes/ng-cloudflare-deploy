@@ -1,7 +1,7 @@
 {
   "builders": {
     "deploy": {
-      "implementation": "./deploy/builder",
+      "implementation": "./deploy/index",
       "description": "Deploy to Cloudfare Pages"
     }
   }

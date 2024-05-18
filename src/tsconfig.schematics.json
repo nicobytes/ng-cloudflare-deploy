@@ -14,22 +14,21 @@
     "noImplicitThis": true,
     "noUnusedParameters": true,
     "noUnusedLocals": true,
-    "rootDir": "schematics",
-    "outDir": "../../dist/ng-cloudflare-deploy/schematics",
+    "rootDir": ".",
+    "outDir": "./dist",
     "skipDefaultLibCheck": true,
     "skipLibCheck": true,
     "sourceMap": true,
     "strictNullChecks": true,
     "target": "es6",
     "types": [
-      "jasmine",
       "node"
     ]
   },
   "include": [
-    "schematics/**/*"
+    "./**/*"
   ],
   "exclude": [
-    "schematics/*/files/**/*"
+    "./*/files/**/*"
   ]
 }
