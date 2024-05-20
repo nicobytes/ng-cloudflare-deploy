@@ -1,3 +1,3 @@
-build:
+publish:
 	npm run build
-	npm publish
+	cd dist && npm publish

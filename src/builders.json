@@ -1,7 +1,9 @@
 {
+  "$schema": "./node_modules/@angular-devkit/architect/src/builders-schema.json",
   "builders": {
     "deploy": {
       "implementation": "./deploy/index",
+      "schema": "./deploy/schema.json",
       "description": "Deploy to Cloudfare Pages"
     }
   }

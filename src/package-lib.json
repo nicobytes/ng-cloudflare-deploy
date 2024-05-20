@@ -1,0 +1,20 @@
+{
+  "name": "@nicobytes/ng-cf-deploy",
+  "version": "0.0.66",
+  "ng-add": {
+    "save": "devDependencies"
+  },
+  "builders": "./builders.json",
+  "schematics": "./collection.json",
+  "dependencies": {
+    "@angular-devkit/architect": "0.1703.7",
+    "@angular-devkit/core": "^17.0.0",
+    "@angular-devkit/schematics": "^17.0.0",
+    "@schematics/angular": "^17.0.0",
+    "tslib": "^2.3.0"
+  },
+  "sideEffects": false,
+  "publishConfig": {
+    "registry": "http://localhost:4873"
+  }
+}

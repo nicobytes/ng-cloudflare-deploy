@@ -19,7 +19,11 @@ interface Params {
 
 export default function applyTemplateFiles({project, projectName}: Params): Rule {
   return (tree: Tree) => {
-    tree.delete(join(normalize(project.root), 'server.ts'));
+    const serverPath = join(normalize(project.root), 'server.ts');
+    const serverFileExist = tree.exists(serverPath);
+    if (serverFileExist) {
+      tree.delete(serverPath);
+    }
 
     const templateTsCode = apply(url('./files'), [
       filter(path => path.endsWith('.ts.template')),

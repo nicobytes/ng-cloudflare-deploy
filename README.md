@@ -22,3 +22,13 @@ Run `ng test ng-cloudflare-deploy` to execute the unit tests via [Karma](https:/
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+
+# TODOs
+
+- [ ] Create deploy command
+    - [ ] Copy Files
+    - [ ] Plyfills
+- [ ] Detect builder
+- [ ] Detect SSR or SPA
+- [ ] Fix errors with CF deps
